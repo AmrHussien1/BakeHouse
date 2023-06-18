@@ -8,8 +8,8 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME_SOHAG', passwordVariable: 'PASSWORD_SOHAG')]) {
                     sh '''
                         docker login -u ${USERNAME_SOHAG} -p ${PASSWORD_SOHAG}
-                        docker build -t amrhussien/bakehouseitisohag:v${BUILD_NUMBER} .
-                        docker push amrhussien/bakehouseitisohag:v${BUILD_NUMBER}
+                        docker build -t amrhussien123/bakehouseitisohag:v${BUILD_NUMBER} .
+                        docker push amrhussien123/bakehouseitisohag:v${BUILD_NUMBER}
                     '''
                 }
             }
